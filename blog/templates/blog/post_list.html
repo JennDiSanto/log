@@ -1,11 +1,14 @@
 <html>
   <head>
-    <title>Jen's blog</title>
+    <h1>Hello World!</h1>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <p>Here's my first web page.</p>
-    <p><em>It works!</em></p>
-    <a href="http://www.quanergy.com/">Quanergy</a>
+    {% for post in Jen %}
+      <div>
+        <p><h2>{{post.title}}</h2></p>
+        <p>published: {{post.published_date}}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
